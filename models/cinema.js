@@ -30,4 +30,11 @@ Cinema.prototype.checkFilmsByYear = function(year) {
   })
   return yearFilms;
 }
+
+Cinema.prototype.checkNoFilmsYear = function(year) {
+  const yearFilms = this.films.some((film) => {
+  film.year === year  
+  })
+  return yearFilms
+}
 module.exports = Cinema;
