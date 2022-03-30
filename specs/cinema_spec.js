@@ -54,7 +54,14 @@ describe('Cinema', function () {
     const actual = cinema.checkNoFilmsYear(2019);
     assert.strictEqual(actual, false);
   });
-  it('should be able to check whether all films are over a particular length');
-  it('should be able to calculate total running time of all films');
+  it('should be able to check whether all films are over a particular length', function() {
+    const actual = cinema.checkAllFilmsLength(90);
+    assert.strictEqual(actual, true);
+  });
+  it('should be able to calculate total running time of all films', function(){
+    const actual = cinema.calcTotalRunningTime();
+    assert.strictEqual(actual, 622);
+  });
+
 
 });
